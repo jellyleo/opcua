@@ -1,0 +1,44 @@
+函数01—线形变化型
+格式：RAMP(Rate, Low Limit, High Limit, Increment)
+Rate：变化率，单位毫秒
+Low Limit：下限值
+High Limit：上限值
+Increment：变化量
+举例：
+RAMP(10, 0, 100, 1)
+从0增长到100，每10毫秒增长1。
+RAMP(10, 0, 100, -1)
+从100降低到0，每10毫秒减少1。
+
+函数02—随机变化型
+格式：RANDOM(Rate, Low Limit, High Limit)
+Rate：变化率，单位毫秒
+Low Limit：下限值
+High Limit：上限值
+举例：
+RANDOM(10, 0, 100)
+在0和100之间随机变化，每10毫秒变化一次。
+
+函数03—三角函数型
+格式：SINE(Rate, Low Limit, High Limit, Frequency, Phase)
+Rate：变化率/变化周期，单位毫秒
+Low Limit：下限值
+High Limit：上限值
+Frequency：三角函数频率
+Phase：三角函数偏移量
+注意：
+01—频率（Frequency）的最大有效值是5Hz，有效范围是从0.001到5赫兹。
+02—偏移量（Phase）取值范围在0.0至360.0之间。
+03—为了得到一个更好的正弦输出，变化率（Rate）应该至少比期望频率快一倍。比如频率（Frequency）为5赫兹的正弦曲线，其周期是200毫秒，那么变化周期（Rate）的值最大只能设为100毫秒。
+04—变化周期的取值范围是10-1000毫秒。
+举例：
+SINE(10, -20, 20, 1, 0)
+以1赫兹的频率在-20和20 之间进行正弦变化，偏移量为0
+
+用户自定义型
+格式：USER(Rate, User Value1, User Value2, User Value3,…User ValueN)
+Rate：变化率，单位毫秒
+User Value1….ValueN：用户自定义的值，可以有多个
+举例：
+USER(20, 1, 2, 3, 4)
+以20毫秒的频率循环显示1、2、3、4中的一个数字。
