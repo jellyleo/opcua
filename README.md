@@ -4,9 +4,9 @@ OpcUa协议的Java实现，项目基于Eclipse Milo库开发。服务端采用Ke
 
 ---
 
-##使用步骤：
+## 使用步骤：
 
-###1、启动服务端。
+### 1、启动服务端。
 >打开KEPServerEX 6 Administration
 >添加项目通道、设备和标记
 >项目-属性 启用匿名登录（客户端使用匿名验证时需要）
@@ -14,7 +14,7 @@ OpcUa协议的Java实现，项目基于Eclipse Milo库开发。服务端采用Ke
 >OPCUA配置-服务器端点，TCP连接和安全策略
 >重新初始化服务器运行时
 
-###2、启动客户端
+### 2、启动客户端
 >更改application.properties配置文件
 >>OpcUaClientConfig.setIdentityProvider()提供四种验证方式：
 AnonymousProvider
@@ -25,7 +25,7 @@ X509IdentityProvider
 
 >启动OpcUaApplication
 
-###3、接口调试
+### 3、接口调试
 >/connect 建立连接
 >/disconnect 断开连接
 >/read 节点读取（较为常用信息是节点值和值数据类型）
