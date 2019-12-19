@@ -22,12 +22,10 @@ OpcUa协议的Java实现，项目基于Eclipse Milo库开发。服务端采用Ke
 ### 2、启动客户端
 > 更改application.properties配置文件
 >> OpcUaClientConfig.setIdentityProvider()提供四种验证方式：
-
 >> + AnonymousProvider
 >> + CompositeProvider
 >> + UsernameProvider
 >> + X509IdentityProvider
-
 >> 其中匿名验证和用户名验证较为常用和简单
 
 > 启动OpcUaApplication
