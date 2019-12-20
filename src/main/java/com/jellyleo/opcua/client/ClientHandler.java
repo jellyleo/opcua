@@ -86,7 +86,7 @@ public class ClientHandler {
 		}
 
 		// 断开连接
-		client.disconnect().get();
+		clientRunner.getFuture().complete(client);
 		client = null;
 		return "断开连接成功";
 	}

@@ -136,4 +136,12 @@ public class ClientRunner {
 	private Predicate<EndpointDescription> endpointFilter() {
 		return e -> true;
 	}
+
+	/**
+	 * @return the future
+	 */
+	public CompletableFuture<OpcUaClient> getFuture() {
+		return future;
+	}
+	
 }
