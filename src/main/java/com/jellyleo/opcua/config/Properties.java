@@ -6,7 +6,8 @@
 package com.jellyleo.opcua.config;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 import lombok.Getter;
 
@@ -17,7 +18,8 @@ import lombok.Getter;
  * @date 2019年12月19日
  */
 @Getter
-@Component
+@Configuration
+@PropertySource("classpath:opcua.properties")
 public class Properties {
 	@Value("${opcua.server.endpoint.url}")
 	private String endpointUrl;

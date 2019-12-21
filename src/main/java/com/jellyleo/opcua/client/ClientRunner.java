@@ -66,7 +66,7 @@ public class ClientRunner {
 			}
 
 			try {
-				client.disconnect().get();
+				c.disconnect().get();
 				Stack.releaseSharedResources();
 			} catch (InterruptedException | ExecutionException e) {
 				log.error("Error disconnecting:", e.getMessage(), e);
@@ -143,5 +143,5 @@ public class ClientRunner {
 	public CompletableFuture<OpcUaClient> getFuture() {
 		return future;
 	}
-	
+
 }

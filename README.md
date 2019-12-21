@@ -20,7 +20,7 @@ OpcUa协议的Java实现，项目基于Eclipse Milo库开发。服务端采用Ke
 > 重新初始化服务器运行时
 
 ### 2、启动客户端
-> 更改application.properties配置文件
+> 更改application.properties配置文件、opcua.properties配置文件
 >> OpcUaClientConfig.setIdentityProvider()提供四种验证方式：
 >> + AnonymousProvider
 >> + CompositeProvider
